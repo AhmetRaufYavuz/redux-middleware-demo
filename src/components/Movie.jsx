@@ -1,6 +1,7 @@
-import { movies } from './../data.js';
+import { useSelector } from 'react-redux';
 
 export default function Movie(props) {
+  const movies = useSelector((store) => store.movies);
   const movie = movies[props.sira];
 
   return (
